@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Dos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script>
+        /**
+ * @param String name
+ * @return String
+ */
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+    </script
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>direccion</td>
+            <td>telefono</td>
+            <td>usuario</td>
+            <td>contraseña</td>
+        </tr>
+    
+        <tr><td><script>document.write(getParameterByName('nombre'));</script></td></tr>
+        <tr><td><script>document.write(getParameterByName('apelido'));</script></td></tr>
+        <tr><td><script>document.write(getParameterByName('direccion'));</script></td></tr>
+        <tr><td><script>document.write(getParameterByName('telefono'));</script></td></tr>
+        <tr><td><script>document.write(getParameterByName('usuario'));</script></td></tr>
+        <tr><td><script>document.write(getParameterByName('contrasena'));</script></td></tr>
+
+    </table>
+</body>
+</html>
